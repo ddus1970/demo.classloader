@@ -1,0 +1,11 @@
+/.vscode/
+/mods/
+/libs/
+/plugins/
+/demo.classloader.app/mods/
+/demo.classloader.app/libs/
+/demo.classloader.app/target/
+/demo.classloader.logging/target/
+/demo.classloader.plugins/target/
+/demo.classloader.providers.caesar/target/
+/demo.classloader.providers.interfaces/target/
