@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <artifactId>parent</artifactId>
+    <groupId>demo.classloader</groupId>
+    <version>1.0</version>
+  </parent>
+
+  <groupId>demo.classloader</groupId>
+  <artifactId>logging</artifactId>
+  <version>1.0</version>
+
+  <name>demo.classloader.logging</name>
+
+  <licenses>
+    <license>
+      <name>The Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+
+  <!--Add project information here start-->
+  <url></url>
+  <description></description>
+  <developers>
+    <developer>
+      <name>Dmitry D. Usenko</name>
+      <email>ddus1970@gmail.com</email>
+      <organizationUrl>http://blog.xethh.me</organizationUrl>
+    </developer>
+  </developers>
+  <!--Add project information here end-->
+
+  <dependencies>
+  </dependencies>
+
+  <dependencyManagement>
+  </dependencyManagement>
+
+  <build>
+    <sourceDirectory>src/main/sources</sourceDirectory>
+    <testSourceDirectory>src/test/sources</testSourceDirectory>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+      </resource>
+    </resources>
+    <testResources>
+      <testResource>
+        <directory>src/test/resources</directory>
+      </testResource>
+    </testResources>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>
+      </plugins>
+    </pluginManagement>
+    <plugins>
+    </plugins>
+  </build>
+</project>

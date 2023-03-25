@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>demo.classloader</groupId>
+    <artifactId>plugins</artifactId>
+    <name>demo.classloader.plugins</name>
+    <version>1.0</version>
+    <packaging>jar</packaging>
+	
+    <parent>
+        <groupId>demo.classloader</groupId>
+        <artifactId>parent</artifactId>
+        <version>1.0</version>
+    </parent>
+
+    <properties>
+    </properties>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.3.0</version>
+                <configuration>
+                    <outputDirectory>${maven.multiModuleProjectDirectory}/plugins</outputDirectory>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.3.0</version>
+                <configuration>
+                    <outputDirectory>${maven.multiModuleProjectDirectory}/plugins</outputDirectory>
+                </configuration>
+            </plugin>
+            
+            <plugin>
+                <groupId>com.coderplus.maven.plugins</groupId>
+                <artifactId>copy-rename-maven-plugin</artifactId>
+                <version>1.0</version>
+                <executions>
+                    <execution>
+                        <id>copy-file</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>copy</goal>
+                        </goals>
+                        <configuration>
+                            <!-- Place config here -->
+                            <sourceFile>${project.build.outputDirectory}/demo/classloader/plugins/Plugin1.class</sourceFile>
+                            <!--destinationFile>${maven.multiModuleProjectDirectory}/demo/classloader/plugins/Plugin1.class</destinationFile-->
+                            <destinationFile>${maven.multiModuleProjectDirectory}/plugins/demo/classloader/plugins/Plugin1.class</destinationFile>
+                            <overWrite>true</overWrite>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>            
+        </plugins>
+    </build>
+</project>
